@@ -3,6 +3,8 @@ rcht/bril-rcht
 
 This repository contains my implementations of the material covered in the lecture of Cornell's CS 6120 course.
 
+All my work lives in `rcht/`.
+
 
 Bril: A Compiler Intermediate Representation for Learning
 =========================================================
