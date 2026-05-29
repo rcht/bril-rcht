@@ -116,7 +116,7 @@ def local_value_numbering(IR: dict) -> dict:
             for instr in block["instrs"]:
                 # print(instr, cloud)
                 # print(table)
-                if instr.get("type") != "int":
+                if instr.get("type") != "int" or instr.get("op") == "call":
                     # simply replace args with canon
                     if "args" in instr:
                         instr["args"] = [canonical_home(table, cloud[a]) for a in instr["args"]]

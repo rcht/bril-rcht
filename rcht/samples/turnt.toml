@@ -1,1 +1,1 @@
-command = "bril2json < {filename} | python ../local_value_numbering.py -d | brili {args}"
+command = "bril2json < {filename} | brili {args}"
