@@ -1,7 +1,16 @@
 ## 1. Basic Block Extraction
 
-Done aside from speculative execution.
+Done, aside from speculative execution.
 
 ## 2. Trivial Dead Code Elimination
 
-One of the DCE methods is working. The other relies on the speculative execution handling by the basic block extractor being correct.
+Done, but the code relies on the basic block code being correct
+
+## 3. Local Value Numbering
+
+Passes implemented:
+- Copy Propagation
+- Common Subexpression Elimination (with commutativity)
+- Constant Folding
+
+There is an issue, though. When a variable is updated, its old entry in the local value table should be removed. Probably a quick fix....
