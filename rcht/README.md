@@ -14,3 +14,9 @@ Passes implemented:
 - Constant Folding
 
 There is an issue, though. When a variable is updated, its old entry in the local value table should be removed. Probably a quick fix....
+
+## 4. Data Flow Analysis
+
+Implemented the reaching definitions analysis.
+
+Might do a backwards worklist algorithm like liveness in the future.

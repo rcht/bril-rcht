@@ -68,7 +68,7 @@ def get_cfg(IR):
         for ind, block in enumerate(function['blocks']):
             terminator = block['instrs'][-1]
             if terminator.get("op") in ['jmp', 'br', 'ret']:
-                for label in terminator["labels"]:
+                for label in terminator.get("labels", []):
                     mapped_block = label_to_bb[label]
                     if mapped_block not in adj[block['name']]:
                         adj[block['name']].append(mapped_block)
